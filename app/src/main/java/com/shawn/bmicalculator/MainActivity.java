@@ -1,4 +1,4 @@
-package com.shawn.bmicalculator;
+﻿package com.shawn.bmicalculator;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText et1, et2;
     Button btn;
-    TextView tv;
+    TextView tv1;
     double bmi,myweight,metersheight;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         et1=(EditText)findViewById(R.id.editText4);
         et2=(EditText)findViewById(R.id.editText5);
         btn=(Button)findViewById(R.id.button2);
-        tv=(TextView)findViewById(R.id.result);
+        tv1=(TextView)findViewById(R.id.result);
 
     }
     public void calBmi(View view){
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
         if(bmi!=0 && bmi>0){
             if(bmi<=18.5){
-                tv.setText("You are Underweight "+"\n\n"+" Your BMI is "+Math.round(bmi));
+                tv1.setText("You are Underweight "+"\n\n"+" Your BMI is "+Math.round(bmi));
             }else if (bmi>=18.5 && bmi<=24.9){
-                tv.setText("You are Normal weight "+"\n\n"+" Your BMI is "+Math.round(bmi));
+                tv1.setText("You are Normal weight "+"\n\n"+" Your BMI is "+Math.round(bmi));
 
             }else if(bmi>=25 && bmi<=29.9 ){
-                tv.setText("You are Overweight "+"\n\n"+" Your BMI is "+Math.round(bmi) );
+                tv1.setText("You are Overweight "+"\n\n"+" Your BMI is "+Math.round(bmi) );
             }else if(bmi>30){
-                tv.setText("You are Obese "+"\n\n"+" Your BMI is "+Math.round(bmi) );
+                tv1.setText("You are Obese "+"\n\n"+" Your BMI is "+Math.round(bmi) );
             }
 
         }else{
