@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    
+    Button btn6;
     EditText et1, et2;
     Button btn;
     TextView tv1;
